@@ -11,6 +11,27 @@ async function quantidadeUsuariosPorRede() {
             type: 'bar'
         }
     ]
+    const laytout = {
+        plot_bgcolor: getCSS('--bg-color'),
+        paper_bgcolor: getCSS('--bg-color'),
+        title: {
+            text: 'Redes sociais com mais usuários',
+            x: 0;
+            font: {
+                color: getCSS('--primary-color'),
+                size: 30,
+                font: getCSS('--font')
+            }
+        }
+    },
+    xaxis: {
+        tickfont: tickConfig,
+        title: {
+            text: 'Nome das redes',
+            font: {
+                color: getCSS('--secondary-color')
+            }
+        }
     
     const grafico = document.createElement('div')
     grafico.className = 'grafico'
@@ -20,3 +41,5 @@ async function quantidadeUsuariosPorRede() {
     }
     
     quantidadeUsuariosPorRede();
+    
+   
